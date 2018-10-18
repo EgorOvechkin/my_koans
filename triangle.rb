@@ -15,6 +15,7 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  raise TriangleError, "The triangle does not exist" if a + b <= c || a + c <= b || c + b <= a
   return :equilateral  if a == b && b == c
   return :isosceles    if (a == b) ^ (b == c) ^ (c == a)
   return :scalene
